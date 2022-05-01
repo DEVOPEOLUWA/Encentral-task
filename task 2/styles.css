@@ -1,0 +1,125 @@
+*{
+ padding: 0;
+ margin: 0;
+ box-sizing: border-box;
+ text-decoration: none;
+}
+html{
+ font-size: 80%;
+}
+body{
+ min-height: 100vh;
+ padding: 2rem 10%;
+ background: #faee64;
+}
+.section{
+ align-items: center;
+ justify-content: center;
+}
+.section .heading{
+ font-family:Georgia, 'Times New Roman', Times, serif;
+ position: relative;
+ padding:2rem;
+ font-size: 3rem;
+ align-self: center;
+ justify-content: center;
+ color: #001921;
+}
+.section p{
+ font-weight: 400;
+ font-size: 2rem;
+ padding: 1rem 2.5%;
+ align-items: center;
+ justify-content: center;
+
+}
+.section .row{
+ position: relative;
+ top: 6rem;
+ font-family:Georgia, 'Times New Roman', Times, serif;
+  border: .2rem solid #fe94c2;
+padding: 2rem;
+box-shadow: 0 .5rem 1rem rgba(14, 14, 14, 0.125);
+background: #faee64;
+display: flex;
+flex-wrap: wrap;
+gap: 1.2rem;
+border-radius:1.4rem;
+
+}
+.section .row .user{
+padding: 1rem;
+ flex: 1 1 23rem;
+ border-radius: .9rem;
+ line-height: 3rem;
+
+
+}
+.section .row .input-section{
+ display: flex;
+ flex-direction: column;
+ padding: 2rem 7%;
+ line-height: 1rem;
+}
+.section .row .input-section label{
+ font-size: 1rem;
+padding: .7rem;
+}
+.section .row .input-section input{
+ background-color: #ffffff;
+   padding: 1rem;
+   margin: .7rem;
+   font-size: 1.5rem;
+   text-transform:capitalize;
+   border:2px solid #fe94c2;
+   width: 70%;
+   height: 40px;
+   border-radius: 1rem;
+  
+}
+.section .row .input-section a{
+ width: 60px;
+ position: relative;
+ top: 2rem;
+ background: #fe94c2;
+ color: #fff;
+ padding: .9rem;
+ font-size: 1rem;
+ border-radius: .4rem;
+ left: 5rem;
+}
+.table{
+ bottom: 7rem;
+position: relative;
+top: 16rem;
+}
+.table .headers{
+ display: flex;
+ justify-content: space-between;
+ width: 100%;
+margin: 30px auto 0px;
+padding: 0 15px;
+font-weight:700 ;
+text-transform: uppercase;
+}
+.table .headers .list{
+display: block;
+width: 100%;
+max-width: 480px;
+margin: 0 auto;
+
+}
+.table .list .list-item{
+ display: flex;
+ justify-content: space-between;
+ width: 100%;
+margin: 15px 0;
+padding: 15px;
+border: 1px solid #fe94c2;
+border-radius: 8px;
+}
+
+.table .list .list-item div:nth-child(1),
+.table .list .list-item div:nth-child(2){
+  flex:1;
+}
