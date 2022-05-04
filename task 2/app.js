@@ -1,39 +1,33 @@
 let list = document.querySelector('.list');
-let input  = document.getElementById('input').value;
+
 let btn = document.querySelector('.submit');
 
   
 btn.addEventListener('click',() => {
+  let input  = document.getElementById('input').value;
+  if(input.length < 2){
+ switch(input){
+   case '1' : sortName();
+   break;
+   case '2': sortLast();
+   break;
+   case '3' : sortAge();
+break;
+   default :
+ alert('Mo match found')
+ }
+}
+else{
+ alert('Invalid Inputs!');
+}
 
-
-  if(input.value !== 1){
-   
-    sortName();
-
-  }
-   if(input.value !== 2){
-   
-    sortLast();
-
-  }
-   if(input.value !== 3){
-    sortAge();
-  }
-  // else if(input.value > 3){
-  //   alert('incorrect input')
-  // }
 })
    
  
 
 
-// const byName = document.querySelector('.byName');
-// byName.addEventListener('click',  () => {
-//      byName.disabled = true;
-//    sortName();
- 
-  
-// })
+
+   
 
 let list_items  = [
  {
