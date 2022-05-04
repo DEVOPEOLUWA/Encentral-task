@@ -1,57 +1,43 @@
+class Node {
+  constructor(d) {
+    this.data = d;
+    this.left = null;
+    this.right = null;
+  }
+}
 
-	
-	class Node {
-		constructor(d) {
-			this.data = d;
-			this.left = null;
-			this.right = null;
-		}
-	};
+function countOccurrence(root, K) {
+  let s = [];
+  let curr = root;
 
+  let count = 0;
 
-	function countOccurrence(root, K) {
-		let s = [];
-		let curr = root;
+  while (curr != null || s.length != 0) {
+    while (curr != null) {
+      s.push(curr);
+      curr = curr.left;
+    }
 
-	
-		let count = 0;
+    curr = s[s.length - 1];
+    s.pop();
 
-		while (curr != null || s.length != 0) {
+    // Increment count if element = K
+    if (curr.data == K) count++;
 
-			
-			while (curr != null) {
+    // Traverse the right subtree
+    curr = curr.right;
+  }
 
+  return count;
+}
 
-				s.push(curr);
-				curr = curr.left;
-			}
+// Driver code
 
-			
-			curr = s[s.length - 1];
-			s.pop();
+// Binary tree as shown in example
 
-			// Increment count if element = K
-			if (curr.data == K)
-				count++;
+let K = 'map';
 
-			// Traverse the right subtree
-			curr = curr.right;
-		}
-
-		return count;
-	}
-
-	// Driver code
-
-
-	// Binary tree as shown in example
-	
-	let K = map;
-
-	// Function call
- 
-
-
+// Function call
 
 var root = new Node('start');
 root.left = new Node('child');
@@ -74,6 +60,6 @@ root.right.left.left.right = new Node('child');
 root.right.left.left.left = new Node('steak');
 root.right.right.right.right = new Node('map');
 
-console.log(countOccurrence(root, K));
-
-
+console.log(
+  'The word ' + K + ' appears ' + countOccurrence(root, K) + ' times'
+);
